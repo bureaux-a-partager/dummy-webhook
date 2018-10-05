@@ -1,0 +1,21 @@
+version: '3'
+services:
+  webhook:
+    restart: always
+    environment:
+      PORT: 80
+    build:
+      context: .
+      dockerfile: Dockerfile
+  # ngrok is used to allow create a public http tunnel to google_webook:8083
+  # the address of the ngrok url can be found using :
+  # - web interface : http://localhost:4040
+  # - curl : curl 127.0.0.1:4040/api/tunnels
+  ngrok:
+    restart: always
+    image: wernight/ngrok
+    ports:
+      - "4040:4040"
+    environment:
+      NGROK_REGION: eu
+      NGROK_PORT: webhook:80
