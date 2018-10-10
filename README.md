@@ -1,6 +1,6 @@
 # Dummy Webhook
 
-Dummy Webhook is a dummy webhook for when you need to have to test a service webhook.
+Dummy Webhook is a dummy webhook for when you need to test a service webhook.
 
 It will locally run a webserver and make it public on the internet (using https://ngrok.com/). 
 Every call to this web server will be answered by a 200 and body that says "ok"
