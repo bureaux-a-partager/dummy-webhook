@@ -11,7 +11,7 @@ You need to have docker and docker-compose installed on your machine. Go here to
 
 Then open a console and run the following commands :
 ```
-git clone XXX
+git clone git@github.com:bureaux-a-partager/dummy-webhook.git
 docker-compose up
 ```
 
